@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>React SSR Example</title>
+    <script async defer type="module" src="./Client.js"></script>
+  </head>
+  <body>
+    <div id="root"><!-- SSR content will be injected here --></div>
+    <!-- The Client.js script will hydrate this content on the client side,
+    exactly that's what we had done in the previous example, we have rendered
+    the React component to a string on the server side and injected it into this
+    div.-->
+  </body>
+</html>

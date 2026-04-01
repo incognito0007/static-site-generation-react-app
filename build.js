@@ -18,7 +18,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const distPath = path.join(__dirname, "dist");
 
-const shell = readFileSync(path.join(__dirname, "index.html"), "utf-8");
+const shell = readFileSync(path.join(__dirname, "index.html"), "utf8");
 
 const app = renderToStaticMarkup(h(App));
 const html = shell.replace("<!--ROOT-->", app);
