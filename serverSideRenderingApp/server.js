@@ -30,3 +30,5 @@ app.get("/", (req, reply) => {
 app.listen({
   port: 3000,
 });
+
+// whenever I change my server code, I need to restart the server for the changes to take effect. We also need to run npm run build to rebuild the client-side code after making changes to it, since the server is serving the static files from the dist directory.
