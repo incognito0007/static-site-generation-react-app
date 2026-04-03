@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo, useCallback } from "react";
 import { marked } from "marked";
 
 import MarkdownPreview from "./MarkdownPreview";
@@ -16,8 +16,8 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
-  const options = { text, theme };
-  const render = (text) => marked.parse(text);
+  const options = useMemo(() => ({ text, theme }), [text, theme]);
+  const render = useCallback((text) => marked.parse(text), []);
 
   return (
     <div className="app">
